@@ -2,6 +2,6 @@
   import SignInForm from './lib/SignInForm.svelte';
 </script>
 
-<main class="p-5">
+<main>
   <SignInForm />
 </main>
