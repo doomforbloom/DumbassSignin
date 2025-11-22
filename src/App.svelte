@@ -4,6 +4,6 @@
 </script>
 
 <main class="h-1/1 flex flex-col items-center justify-center">
-  <Launch />
+  <!-- <Launch /> -->
   <CreateAccount />
 </main>
