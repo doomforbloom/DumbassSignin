@@ -3,7 +3,7 @@
   import CreateAccount from './lib/CreateAccount.svelte';
 </script>
 
-<main>
+<main class="h-1/1 flex flex-col items-center justify-center">
   <Launch />
   <CreateAccount />
 </main>

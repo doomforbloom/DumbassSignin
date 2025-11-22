@@ -8,8 +8,8 @@
         <h2 class="">Log into your Makerspace Account</h2>
     </div>
     <div class="grid grid-rows-2 gap-5 mb-4">
-        <FloatingLabelInput class="col-span-full" clearable id="clearable_standard" name="Email" type="text">Email</FloatingLabelInput>
-        <FloatingLabelInput class="col-span-full" clearable id="clearable_standard" name="epcc-id" type="text">EPCC ID</FloatingLabelInput>
+        <FloatingLabelInput class="col-span-full" clearable name="Email" type="text">Email</FloatingLabelInput>
+        <FloatingLabelInput class="col-span-full" clearable name="epcc-id" type="text">EPCC ID</FloatingLabelInput>
     </div>
     <div class="flex flex-col gap-2">
         <Button class="py-4" color="primary">Sign In</Button>
