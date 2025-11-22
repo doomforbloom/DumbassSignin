@@ -1,9 +1,9 @@
 <script>
   import Launch from './lib/Landing.svelte';
-  import SignInForm from './lib/SignInForm.svelte';
+  import CreateAccount from './lib/CreateAccount.svelte';
 </script>
 
 <main>
-  <!-- <SignInForm /> -->
   <Launch />
+  <CreateAccount />
 </main>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Input, Label, Button, Alert } from "flowbite-svelte";
+  import { FloatingLabelInput, Button, Alert, Radio } from "flowbite-svelte";
   import { account } from "./AW.svelte";
 
   let name, epcc_id, email, password;
@@ -53,59 +53,19 @@
 </Alert>
 {/if}
 
-<div class="border-2 rounded-xl mt-2 mb-2">
-  <form class="p-8">
-    <div class="mb-6 grid gap-6 md:grid-cols-2">
-      <div>
-        <Label for="first_name" class="mb-2">Full name</Label>
-        <Input
-          type="text"
-          id="first_name"
-          placeholder="John"
-          required
-          bind:value={name}
-        />
-      </div>
-      <div>
-        <Label for="epcc_id" class="mb-2">ID</Label>
-        <Input
-          type="text"
-          id="epcc_id"
-          placeholder="123456789"
-          required
-          bind:value={epcc_id}
-        />
-      </div>
-    </div>
-    <div class="mb-6">
-      <Label for="email" class="mb-2">Email address</Label>
-      <Input
-        type="email"
-        id="email"
-        placeholder="john.doe@company.com"
-        required
-        bind:value={email}
-      />
-    </div>
-    <div class="mb-6">
-      <Label for="password" class="mb-2">Password</Label>
-      <Input
-        type="password"
-        id="password"
-        placeholder="•••••••••"
-        required
-        bind:value={password}
-      />
-    </div>
-    <Button
-      type="button"
-      loading={buttonLoad}
-      onclick={() => {
-        buttonLoad = true;
-        submitError = false;
-        createAccount(epcc_id, email, password, name);
-        setTimeout(() => {buttonLoad = false}, 800);
-      }}>Submit</Button
-    >
-  </form>
+<div class="flex flex-col gap-3 w-100 p-7 border-gray-500 rounded-lg border-2">
+  <h1 class="text-2xl font-semibold">Create New Account</h1>
+  <div class="flex flex-col gap-3 mb-2">
+    <FloatingLabelInput class="col-span-full" clearable id="clearable_standard" name="Name" type="text">Name</FloatingLabelInput>
+    <FloatingLabelInput class="col-span-full" clearable id="clearable_standard" name="Email" type="text">Email</FloatingLabelInput>
+    <FloatingLabelInput class="col-span-full" clearable id="clearable_standard" name="epcc-id" type="text">EPCC ID</FloatingLabelInput>
+  </div>
+  <div class="flex flex-col gap-2">
+    <h3 class="text-xl font-medium">EPCC relationship</h3>
+    <ul class="w-full items-center rounded-lg border border-gray-200 ">
+      <li class="w-full"><Radio name="hor-list" classes={{ label: "p-3" }}>Student</Radio></li>
+      <li class="w-full"><Radio name="hor-list" classes={{ label: "p-3" }}>Faculty / Staff</Radio></li>
+      <li class="w-full"><Radio name="hor-list" classes={{ label: "p-3" }}>Public</Radio></li>
+    </ul>
+  </div>
 </div>
